@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <style>
+        button {
+            height: 10px;
+            width: 10px;
+        }
+    </style>
+    <script>
+        function clck(){
+          console.log("running");
+            var innerht = document.getElementById("inp").value;
+            document.getElementById("imgdiv").innerHTML = '<img src="' + innerht + '" id="thumbnail-img" height="100" width="100" >';
+            
+        }
+    </script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#mytextarea',
+        plugins: [
+      'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+    //   'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+    //   'table emoticons template paste help'
+    ],
+    toolbar: '' +
+      'link image | ' +
+      '',
+    menu: {
+      favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
+    },
+    menubar: 'favs file edit view insert format tools table help',
+    content_css: 'css/content.css'
+  });
+    </script>
+
+  </head>
+
+  <body>
+  <h1>TinyMCE Quick Start Guide</h1>
+  <div id="di">
+    
+    <h1>tis is input</h1>
+        <input type="text" id="inp"></input>
+        <button onclick="clck()"></button>
+        <div id="imgdiv"></div>
+      <br>
+      <div id="poster">
+          <img id="poster-img" src="https://raw.githubusercontent.com/amanansari10106/wiki/master/aa.png" alt="not available" height="100" width="100" >
+          <div><h1 id="poster-heading">Hello i am heading</h3>
+          <p id="poster-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem illum qui optio dicta delectus soluta aliquid corrupti pariatur, amet adipisci aliquam totam omnis doloribus voluptatibus culpa nesciunt ea. <br> Expedita enim libero architecto. Reiciendis, id eligendi?</p>
+        </div>
+      </div>
+  </body>
+  <style>
+      #poster{
+          display: flex;
+      }
+      #poster-heading{
+        margin: 0px;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+      }
+      #poster-img{
+        border-radius: 14px;
+    box-shadow: 1px 1px 5px 5px #d7d7d7;
+      }
+      #poster-para{
+        margin: 0px;
+    margin-left: 25px;
+      }
+  </style>
+</html>
+
+
+<!-- tinyMCE.get('mytextarea').getContent() -->

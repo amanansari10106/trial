@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Converter </title>
+    <style>
+        button{
+            width: 59px;
+    height: 22px;
+    margin: 9px;
+    margin-left: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>
+        Convert Here
+    </h1>
+    <form id="formid">
+        <b>Select Here</b>
+
+    <select id="one" onchange="getddl()">
+        <option value="1">Select the input number system</option>
+        <option value="2">Binary</option>
+        <option value="8">octal</option>
+        <option value="10">Decimal</option>
+        <option value="16">Hexadecimal</option>
+
+
+      </select>
+    </form>
+    <label id="label">
+        
+        <input type="number" placeholder="enter the number" id="inp" disabled> </input>
+    </label>
+    
+</form>
+<button onclick="clck()" id="btn">Convert</button>
+    <div id="divone"></div>
+    <div id="divtwo"></div>
+    <div id="divthree"></div>
+    <div id="divfour"></div>
+<script src="inddex.js">
+    
+</script>
+<script>
+
+    function getddl(){
+       
+        if(formid.one[formid.one.selectedIndex].value == 16){
+            
+        document.getElementById('label').innerHTML = ('<input type="text" placeholder="enter the alpha-numeric" id="inp" autocomplete="off"></input>')
+        }
+        else{
+            
+
+            
+            document.getElementById('label').innerHTML = ('<input type="number" placeholder="enter the number" id="inp" autocomplete="off"> </input>')
+        }
+    }
+
+</script>
+</body>
+
+</html>
